@@ -12,7 +12,7 @@ body{
     
 }
 .calculator-body{
-    background-color: black;
+    background-color: rgb(7, 7, 7);
     width:350px;
     height:600px;
     border-radius: 30px;
@@ -21,8 +21,8 @@ body{
     padding:15px;
 }
 .display{
-    background-color: rgb(119, 181, 181);
-    padding:10px 120px 120px 10px;
+    background-color: rgb(1, 1, 1);
+    padding:50px 10px 10px 50px;
     border-radius: 30px;
     
 }
@@ -40,7 +40,7 @@ body{
     border-radius: 40px;
     font-weight: bold;
     font-size: 30px;
-    background-color: #d1d0cd;
+    background-color: #d7cfb8;
     border:none;
     cursor: pointer;
 }
@@ -118,4 +118,22 @@ body{
 }
 .gray-btn-big:hover{
     background-color: #c4c4c2d8;
+}
+#screen-bottom{
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+    display: flex;
+    justify-content:flex-end;
+    align-items:end;
+    background-color: black;
+}
+#screen-top{
+    color: white;
+    font-size: 0px;
+    display: flex;
+    justify-content:flex-end;
+    align-items:end;
+    background-color: black;
+    
 }
