@@ -1,6 +1,4 @@
-console.log("hello");
-let displayvalue =document.getElementById("displayvalue");
-const button = document.getElementById("button");
+const displayvalue =document.getElementById("displayvalue");
 const numberKeys = document.querySelectorAll('.number');
 const operatorKeys = document.querySelectorAll('.operator');
 const clearButton = document.getElementById('clear');
@@ -28,18 +26,25 @@ function remainder(a,b){
 function operate(num1,num2,operator){
     num1=Number(num1);
     num2=Number(num2);
-    switch (operator) {
+    switch(operator){
         case 'add':
-          return add(num1, num2);
+          add(num1, num2);
           break;
         case 'subtract':
-          return subtract(num1, num2);
+          subtract(num1, num2);
           break;
         case 'multiply':
-          return multiply(num1, num2);
+          multiply(num1, num2);
           break;
         case 'divide':
-          return divide(num1, num2);
+          divide(num1, num2);
+          break;
+        case'reminder':
+           remainder(num1,num2);
+          break;
+        default:
+          init()
+
       }
     
 }
@@ -82,8 +87,8 @@ numberKeys.forEach(numberKey =>
   });
   equalButton.addEventListener('click', () => {
     num2 =
-      num2 || display.replace(num1, '').match(/[^\+|\-|\*|\/]\d*/);
-    result = operate(operation, num1, num2);
+      num2 || display.replace(num1, '').match(/[^\+|\-|\x|\/]\d*/);
+    result = operate(operatortion, num1, num2);
     displayvalue.innerHTML = result % 1 ? Number(result.toFixed(4)) : result;
     operation = '';
   });
