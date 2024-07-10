@@ -1,0 +1,121 @@
+body{
+    margin: 0px;
+    padding: 0px;
+
+}
+.container{
+    padding-top:30px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+.calculator-body{
+    background-color: black;
+    width:350px;
+    height:600px;
+    border-radius: 30px;
+}
+.sub-body{
+    padding:15px;
+}
+.display{
+    background-color: rgb(119, 181, 181);
+    padding:10px 120px 120px 10px;
+    border-radius: 30px;
+    
+}
+.inputfield{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.white-btn{
+    width:70px;
+    height:70px;
+    border-radius: 40px;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: #d1d0cd;
+    border:none;
+    cursor: pointer;
+}
+.white-btn:hover{
+    background-color: #a0a09e;
+    
+     
+}
+.orange-btn{
+    width:70px;
+    height:70px;
+    border-radius: 40px;
+    font-weight: bold;
+    font-size: 30px;
+    background-color:#f5ad1d ;
+    border:none;
+    color:#f0f8ff
+}
+.orange-btn:hover{
+    background-color: #db8318;
+
+}
+.first-row{
+    padding-top:10px;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+.second-row{
+    padding-top:10px;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+.gray-btn{
+    width:70px;
+    height:70px;
+    border-radius: 40px;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: #636262;
+    color:#f0f8ff;
+    border:none;
+}
+.gray-btn:hover{
+    background-color: #c4c4c2d8;
+}
+.third-row{
+    padding-top:10px;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+.fourth-row{
+    padding-top:10px;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+.fifth-row{
+    padding-top:10px;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+.gray-btn-big{
+    width:150px;
+    height:70px;
+    border-radius: 40px;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: #636262;
+    color:#f0f8ff;
+    border:none;
+}
+.gray-btn-big:hover{
+    background-color: #c4c4c2d8;
+}

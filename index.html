@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator-body">
+            <div class="sub-body">
+                <div class="display">
+                    <div id="displayvalue"></div>
+                </div>
+                <div class="inputfield">
+                    <div class="first-row">
+                        <button id="clear" class="white-btn number ">AC</button>
+                        <button id="delete" class="white-btn number" >del</button>
+                        <button id="reminder" class="white-btn operator" data-action="reminder">%</button>
+                        <button id="divide" class="orange-btn operator" data-action="divide">/</button>
+                    </div>
+                    <div class="second-row">
+                        <button id="seven" class="gray-btn number">7</button>
+                        <button id="eight" class="gray-btn number">8</button>
+                        <button id="nine" class="gray-btn number">9</button>
+                        <button id="multiply" class="orange-btn operator" data-action="multiply" >x</button>
+                    </div>
+                    <div class="third-row">
+                        <button id="four" class="gray-btn number">4</button>
+                        <button id="five" class="gray-btn number">5</button>
+                        <button id="six" class="gray-btn number">6</button>
+                        <button id="subtract" class="orange-btn operator" data-action="subtract">-</button>
+                    </div>
+                    <div class="fourth-row">
+                        <button id="one" class="gray-btn number">1</button>
+                        <button id="two" class="gray-btn number">2</button>
+                        <button id="three" class="gray-btn number">3</button>
+                        <button id="addition" class="orange-btn operator" data-action="add">+</button>
+                    </div>
+                    <div class="fifth-row">
+                        <button id="zero" class="gray-btn-big number">0</button>
+                        <button id="dot" class="gray-btn">.</button>
+                        <button id="equal" class="orange-btn">=</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
