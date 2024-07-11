@@ -1,20 +1,3 @@
-const input = document.querySelectorAll(".number");
-input.forEach(button => button.addEventListener("click", display));
-
-const operatorButtons = document.querySelectorAll(".operator");
-operatorButtons.forEach(button => button.addEventListener("click", selectOperator));
-
-const equals = document.querySelector("#equal");
-equals.addEventListener("click", operate);
-
-const clearAllBtn = document.querySelector("#clear");
-clearAllBtn.addEventListener("click", clearData);
-
-const undoBtn = document.querySelector("#delete");
-undoBtn.addEventListener("click", backspace);
-
-
-
 const topScreen = document.querySelector("#screen-top");
 const bottomScreen = document.querySelector("#screen-bottom");
 let lastInput = [];
@@ -135,5 +118,22 @@ const backspace = function () {
     }
 }
 
+
+
+
+const input = document.querySelectorAll(".number");
+input.forEach(button => button.addEventListener("click", display));
+
+const operatorButtons = document.querySelectorAll(".operator");
+operatorButtons.forEach(button => button.addEventListener("click", selectOperator));
+
+const equals = document.querySelector("#equal");
+equals.addEventListener("click", operate);
+
+const clearAllBtn = document.querySelector("#clear");
+clearAllBtn.addEventListener("click", clearData);
+
+const undoBtn = document.querySelector("#delete");
+undoBtn.addEventListener("click", backspace);
 
 
