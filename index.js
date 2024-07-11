@@ -22,8 +22,14 @@ const multiply = function (a, b) {
 };
 
 const divide = function (a, b) {
-    return a / b;
+    if (b !== 0) {
+        return a / b;
+    } else {
+       
+        return 'Error: Division by zero';
+    }
 };
+
 const reminder=function(a,b){
     return a%b;
 };
@@ -53,11 +59,20 @@ const operate = function () {
              
 
     }
-    topScreen.textContent = `${checkIfFloat(num1)} ${operator} ${checkIfFloat(num2)} =`;
-    bottomScreen.textContent = checkIfFloat(result);
-    num1 = result
-    summed = true;
+    if (typeof result === 'string' && result.startsWith('Error')) {
+        
+        topScreen.textContent = result;
+        bottomScreen.textContent = 'Error'; 
+    } else {
+       
+        topScreen.textContent = `${checkIfFloat(num1)} ${operator} ${checkIfFloat(num2)} =`;
+        bottomScreen.textContent = checkIfFloat(result);
+        num1 = result;
+        summed = true;
+    }
 };
+
+
 
 const display = function (btn) {
     if (bottomScreen.textContent === "0") num2 = 0; 
