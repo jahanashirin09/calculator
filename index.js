@@ -24,6 +24,9 @@ const multiply = function (a, b) {
 const divide = function (a, b) {
     return a / b;
 };
+const reminder=function(a,b){
+    return a%b;
+};
 
 
 const operate = function () {
@@ -31,10 +34,25 @@ const operate = function () {
     console.log(num1);
     console.log(num2);
     if (operator === "") return;
-    if (operator === "+") result = add(num1, num2);
-    if (operator === "-") result = subtract(num1, num2);
-    if (operator === "x") result = multiply(num1, num2);
-    if (operator === "/") result = divide(num1, num2);
+    switch(operator){
+        case "+":
+            result=add(num1, num2);
+            break;
+        case "-":
+            result=subtract(num1, num2);
+            break;
+        case "x":
+            result = multiply(num1, num2);
+            break;
+        case "/":
+            result=divide(num1, num2);
+            break;
+        case "%":
+            result=reminder(num1,num2);
+            break;
+             
+
+    }
     topScreen.textContent = `${checkIfFloat(num1)} ${operator} ${checkIfFloat(num2)} =`;
     bottomScreen.textContent = checkIfFloat(result);
     num1 = result
@@ -58,12 +76,30 @@ const display = function (btn) {
 }
 
 const chainOperators = function (btn) {
-    num2 = Number(bottomScreen.textContent);
-    if (operator === "+") result = add(num1, num2);
-    if (operator === "-") result = subtract(num1, num2);
-    if (operator === "x") result = multiply(num1, num2);
-    if (operator === "/") result = divide(num1, num2);
+    num2 = Number(bottomScreen.textContent); 
+    switch(operator){
+        case "+":
+            result=add(num1, num2);
+            break;
+        case "-":
+            result=subtract(num1, num2);
+            break;
+        case "x":
+            result = multiply(num1, num2);
+            break;
+        case "/":
+            result=divide(num1, num2);
+            break;
+        case "%":
+            result=reminder(num1,num2);
+            break;
+             
+
+    }
+    
+    
     num1 = checkIfFloat(result);
+    bottomScreen.textContent = num1;
     num2 = 0;
     lastInput = [];
 }
@@ -73,9 +109,9 @@ const selectOperator = function (btn) {
     if (num1 === 0 || summed === true) {
         operator = btn.target.textContent;
         num1 = Number(bottomScreen.textContent);
-        num1.toFixed(2);
+        num1 = checkIfFloat(num1);
         lastInput = [];
-        topScreen.textContent = `${checkIfFloat(num1)} ${operator}`;
+        topScreen.textContent = `${num1} ${operator}`;
         summed = false;
     }
     else if (num1) {
@@ -85,7 +121,6 @@ const selectOperator = function (btn) {
 
     }
 }
-
 
 const checkIfFloat = function (num) {
     return Number.isInteger(num) ? Number(num) : Number(num.toFixed(2));
