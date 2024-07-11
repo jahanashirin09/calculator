@@ -99,7 +99,7 @@ const chainOperators = function (btn) {
     
     
     num1 = checkIfFloat(result);
-    bottomScreen.textContent = num1;
+    bottomScreen.textContent = num1.toString();
     num2 = 0;
     lastInput = [];
 }
@@ -111,16 +111,22 @@ const selectOperator = function (btn) {
         num1 = Number(bottomScreen.textContent);
         num1 = checkIfFloat(num1);
         lastInput = [];
-        topScreen.textContent = `${num1} ${operator}`;
+        topScreen.textContent = `${checkIfFloat(num1)} ${operator}`;
         summed = false;
     }
-    else if (num1) {
+    else if (lastInput.length > 0) {
         chainOperators();
         operator = btn.target.textContent;
         topScreen.textContent = `${checkIfFloat(result)} ${operator}`;
-
+    } else {
+     
+        operator = btn.target.textContent;
+        topScreen.textContent = `${checkIfFloat(num1)} ${operator}`;
     }
 }
+
+
+
 
 const checkIfFloat = function (num) {
     return Number.isInteger(num) ? Number(num) : Number(num.toFixed(2));
